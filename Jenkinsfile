@@ -21,12 +21,6 @@ pipeline {
         NEXUS_LOGIN = "nexuslogin"
 	SONARSERVER = 'sonarserver'
 	SONARSCANNER = 'sonarscanner'
-        NEXUS_URL = "172.31.12.94:8081"
-        NEXUS_REPOSITORY = "vprofile-release"
-	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
-        NEXUS_CREDENTIAL_ID = "nexuslogin"
-	SONARSERVER = 'sonarserver'
-	SONARSCANNER = 'sonarscanner4'    
         ARTVERSION = "${env.BUILD_ID}"
     }
 	
@@ -67,7 +61,6 @@ pipeline {
             }
         }
 
-
         stage('Sonar Analysis') {
             environment {
                 scannerHome = tool "${SONARSCANNER}"
@@ -88,7 +81,6 @@ pipeline {
           }
         }
 
-
         stage("UploadArtifact"){
             steps{
                 nexusArtifactUploader(
@@ -106,7 +98,6 @@ pipeline {
                      type: 'war']
                   ]
                 )
- 
             }
         }
 		  
