@@ -18,7 +18,7 @@ pipeline {
 	NEXUS_PORT = "8081"
         NEXUS_REPOSITORY = "vprofile-release"
 	NEXUS_REPO_ID    = "vprofile-release"
-        NEXUS_LOGIN = "nexuslogin"
+        NEXUS_LOGIN = "nexuxlogin"
 	SONARSERVER = 'sonarserver'
 	SONARSCANNER = 'sonarscanner'
         ARTVERSION = "${env.BUILD_ID}"
