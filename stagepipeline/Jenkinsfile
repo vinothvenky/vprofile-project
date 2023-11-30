@@ -24,7 +24,7 @@ pipeline {
         ARTVERSION = "${env.BUILD_ID}"
 	registryCredential = "ecr:us-west-1:awscreds"
 	appRegistry = "503129199420.dkr.ecr.us-west-1.amazonaws.com/vprofileapp"
-	profileRegistry = "https://503129199420.dkr.ecr.us-west-1.amazonaws.com"
+	vprofileRegistry = "https://503129199420.dkr.ecr.us-west-1.amazonaws.com"
     }
 	
     stages{
